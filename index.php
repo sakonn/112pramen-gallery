@@ -1,6 +1,7 @@
 <?php  
 //tracy-developer tool
-require __DIR__ . '/tracy-2.7.5/src/tracy.php'; 
+require __DIR__ . '/vendor/autoload.php';
+
 use Tracy\Debugger;
 Debugger::enable(Debugger::DEVELOPMENT);
 ?>
