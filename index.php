@@ -13,18 +13,32 @@ Debugger::enable(Debugger::DEVELOPMENT);
 	<link rel="stylesheet" type="text/css" href="gallery_style.css">
 </head>
 <body>
-<a href="/">Home</a>
+	<div>
+<a href="/">Home</a></div>
 <?php 
+include 'demo.php';
+
 $api_key='4ae001246d441920120d36bf2086a92d';	
 $x = json_decode(file_get_contents('https://www.flickr.com/services/rest/?method=flickr.photosets.getList&api_key='.$api_key.'&user_id=147245078%40N03&format=json&nojsoncallback=1'));
 
 Debugger::barDump($_REQUEST,'req');
+Debugger::barDump($x->photosets->photoset[0],'object');
 
 if ($_REQUEST != null) {
 	Debugger::fireLog('funguje to');
-	foreach ($variable as $key => $value) {
-		# code...
+	$photos = json_decode(file_get_contents( 'https://www.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key='.$api_key.'&photoset_id='.$_REQUEST['id'].'&user_id=147245078%40N03&format=json&nojsoncallback=1'));
+	foreach ($photos->photoset->photo as $photo) {
+		$farm_id=$photo->farm;
+		$server_id=$photo->server;
+		$photo_id=$photo->id;
+		$secret=$photo->secret;
+		$size='q';
+	
+		echo '<a class="img-container" title="'.$photo->id.'" href="?id='.$photo->id.'">
+				<img src="'.Demo::createPhotos($farm_id,$server_id,$photo_id,$secret,$size).'">
+			</a>';
 	}
+	Debugger::barDump($photos->photoset->photo,'photos');
 }else{
 
 	foreach ($x->photosets->photoset as $photoset) {
@@ -33,10 +47,9 @@ if ($_REQUEST != null) {
 		$photo_id=$photoset->primary;
 		$secret=$photoset->secret;
 		$size='q';
-		$img = 'https://farm'.$farm_id.'.staticflickr.com/'.$server_id.'/'.$photo_id.'_'.$secret.'_'.$size.'.jpg';
-
+	
 		echo '<a class="img-container" title="'.$photoset->id.'" href="?id='.$photoset->id.'">
-				<img src="'.$img.'">
+				<img src="'.Demo::createPhotos($farm_id,$server_id,$photo_id,$secret,$size).'">
 				<span>'.$photoset->title->_content.'</span>
 			</a>';
 	}
