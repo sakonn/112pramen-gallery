@@ -1,1 +1,1 @@
-## Brand new gallery app
+## gallery app
