@@ -1,0 +1,16 @@
+gallery-style:
+  css:
+    base:
+      css/gallery.css: {}
+  js:
+    #js/main.js: {}
+    lib/load-photos.js: {}
+    lib/album.js: {}
+    lib/galleries.js: {}
+    lib/main.js: {}
+    lib/jquery.justifiedGallery.js: {}
+    lib/lightbox.js: {}
+    lib/jquery-ui.js: {}
+  dependencies:
+    - core/jquery
+    - core/jqueryUi
