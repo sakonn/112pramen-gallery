@@ -26,7 +26,7 @@ $x = json_decode(file_get_contents('https://www.flickr.com/services/rest/?method
 Debugger::barDump($_REQUEST,'req');
 Debugger::barDump($x->photosets->photoset[0],'object');
 
-if ($_REQUEST != null) {
+if (array_key_exists('id', $_REQUEST)) {
 	Debugger::fireLog('funguje to');
 	$photos = json_decode(file_get_contents( 'https://www.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key='.$api_key.'&photoset_id='.$_REQUEST['id'].'&user_id=147245078%40N03&format=json&nojsoncallback=1'));
 	foreach ($photos->photoset->photo as $photo) {
