@@ -1,0 +1,260 @@
+.plain-button{
+	border: none;
+	background: transparent;
+}
+
+.buttons {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin: 5px;
+}
+
+.galleryButton {
+	background-color: transparent;
+	border: 0px;
+	display: block;
+	color: #232323;
+	font-size: 18px;
+	font-weight:bold;
+	font-family:Proxima Nova,helvetica neue,helvetica,arial,sans-serif;
+	&:hover{
+		color: #606060;
+	};
+}
+
+.galleryNextButton{
+	&:hover{
+		opacity:0.7;
+	}
+	height: 40px;
+	width: 64px;
+	background-image: url("../images/right-arrow-black.png");
+	background-repeat: no-repeat;
+}
+
+.galleryPreviousButton{
+	&:hover{
+		opacity:0.7;
+	}
+	height: 40px;
+	width: 64px;
+	background-image: url("../images/left-arrow-black.png");
+	background-repeat: no-repeat;
+}
+
+#galleryHeader{
+	text-align: left;
+	margin: 0px auto;
+}
+
+.galleryCover{
+	width: 300px;
+	max-height: 300px;
+	margin: 2px;
+}
+
+.album{
+	margin: 10px;
+	display: inline-flex;
+	width: 200px;
+	height: 155px;
+	background-position: 50%;
+	background-size: cover;
+	flex-flow: column;
+	border: 1px solid gray;
+}
+
+.galleryBackground {
+	width: inherit;
+	left: -1px;
+	height: 210px;
+	background: linear-gradient(0deg,rgba(0,0,0,.9) 0,transparent 50%,transparent);
+	display: block;
+	position: relative;
+}
+.galleryDesc {
+	display: block;
+	word-wrap: break-word;
+	width: 100%;
+	bottom: 0;
+	text-align: center;
+	color: black;
+	margin: 0px auto;
+	padding: 0 2px;
+}
+
+.galleryDesc a{
+	margin: 0px;
+	min-height: 40px;
+	font-size: 18px;
+	color: white;
+	font-weight: bold;
+	text-shadow: 0px 0px;
+}
+
+.galleryDesc a:hover{
+	color: white;
+	text-decoration: none;
+}
+
+
+.shareButton{
+	display: block;
+	width: 100%;
+	opacity: 0.5;
+}
+
+.shareGallery{
+	display: block;
+	background: url("../images/export.svg") no-repeat center center;
+	height: 100%;
+	width: inherit;
+}
+
+
+.galleryInfo{
+	position: absolute;
+	bottom: 0px;
+	padding-bottom: 5px;
+	width: inherit;
+}
+
+#mygallery .galleryImage{
+	margin: 2px;
+	width: auto;
+}
+
+.galleryImage:hover {
+	opacity: 0.5 !important;
+}
+
+#mygallery {
+	text-align: center;
+}
+
+/* Lightbox navigation buttons */
+.lb-nav a.lb-next{
+	height: 85%;
+}
+
+.lb-nav a.lb-prev{
+	height: 85%;
+}
+
+.lb-nav a.lb-download{
+		width: 100%;
+		display: block;
+		height: 15%;
+		position: absolute;
+		bottom: 0px;
+		left: 0px;
+		background: url("../images/download.svg") center no-repeat;
+	}
+
+.album-header{
+  height:200px;
+  margin: auto;
+  background-repeat: no-repeat;
+  background-position: 50% 25%;
+  background-size: cover;
+  display:none;
+
+  div:first-child{
+  	height:100%;
+  	width:100%;
+  	background-color: rgba(0, 0, 0, 0.9);
+  	opacity:0.7;
+  }
+  .album-share{
+  	display: block;
+  	height: 40%;
+  	width: 100%;
+  	background: url("../images/export.svg") no-repeat center center;
+  }
+
+  h1{
+  	color:white;
+  	margin: 0px auto;
+  	text-align: center;
+  	padding-top: 20px;
+  	//opacity: 1;
+  }
+
+  p{
+  	font-size:15px;
+  	text-align: center;
+  	color: white;
+  }
+
+}
+
+.no-close .ui-dialog-titlebar-close {
+  display: none;
+}
+
+.loadMore{
+	display: block;
+	height: auto;
+	width: 100%;
+	color: #232323;
+	&:hover{
+		text-decoration: none;
+		color: #606060;
+	}
+}
+
+.ui-dialog-titlebar{
+	display: none;
+}
+
+#pagination{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	button{
+		background-color: transparent;
+		box-shadow: none;
+		border: 2px solid black;
+		border-radius: 5px;
+		margin: 2px 3px;
+		width: 40px;
+		height: 40px;
+		font-weight: 700;
+		text-align: center;
+		-webkit-transition: background-color 0.5s; /* Safari */
+    	transition: background-color 0.5s;
+		&:hover{
+			background-color: rgba(96, 96, 96, 0.3);
+		}
+	}
+	.active {
+		background-color: rgba(96, 96, 96, 0.3);
+	}
+}
+
+@media (min-width: 768px) {
+	.lb-nav a.lb-download{
+		opacity: 0;
+		transition: opacity 600ms;
+			-webkit-transition: opacity 600ms;
+			-moz-transition: opacity 600ms;
+			-o--transition: opacity 600ms;
+	}
+
+	.lb-nav a.lb-download:hover{
+		opacity: 1;
+	}
+}
+
+@media (max-width: 768px) {
+	.lb-nav a.lb-download{
+		opacity: 1;
+		height:14%;
+		bottom: 1%;
+		background: url("../images/download-mobile.svg") center no-repeat;
+	}
+	.shareButton{
+		height:30px !important;
+	}
+}

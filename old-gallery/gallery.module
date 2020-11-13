@@ -1,0 +1,20 @@
+<?php
+
+/**
+ * @file
+ * Contains gallery.module..
+ */
+
+
+/**
+ * Implements hook_theme()
+ * @return mixed
+ */
+
+function gallery_theme(){
+	$theme['gallery_page'] = [
+		'variables' => ['name' => NULL],
+		'template' => 'gallery',
+	];
+	return $theme;
+}

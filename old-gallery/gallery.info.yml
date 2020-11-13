@@ -1,0 +1,8 @@
+name: Flickr gallery module
+description: My own brand new module
+type: module
+core: 8.x
+core_version_requirement: ^8 || ^9
+package: custom
+libraries:
+  - gallery/gallery-style

@@ -1,0 +1,7 @@
+gallery:
+  path: /galeria
+  defaults: 
+    _controller:  Drupal\gallery\Controller\GalleryController::gallery
+    _title: Galéria
+  requirements:
+    _permission: 'access content'
