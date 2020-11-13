@@ -10,6 +10,7 @@ Debugger::enable(Debugger::DEVELOPMENT);
 <!DOCTYPE html>
 <html>
 <head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
 	<title>web</title>
 	<script type="text/javascript" src="assets/jquery.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="assets/gallery_style.css">
