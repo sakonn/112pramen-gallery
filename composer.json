@@ -13,11 +13,13 @@
         }
     ],
     "require": {
-        "components/jquery": "^3.5"
+        "components/jquery": "^3.5",
+        "components/jqueryui": "^1.12"
     },
     "scripts": {
         "post-install-cmd": [
-            "php -r \"copy('vendor/components/jquery/jquery.min.js', 'assets/jquery.min.js');\""
+            "php -r \"copy('vendor/components/jquery/jquery.min.js', 'assets/jquery.min.js');\"",
+            "php -r \"copy('vendor/components/jqueryui/jquery-ui.min.js', 'assets/jquery-ui.min.js');\""
         ]
     }
 }

@@ -12,12 +12,28 @@ Debugger::enable(Debugger::DEVELOPMENT);
 <head>
 	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
 	<title>web</title>
-	<script type="text/javascript" src="assets/jquery.min.js"></script>
+	
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap" rel="stylesheet"> 
 	<link rel="stylesheet" type="text/css" href="assets/gallery_style.css">
 </head>
 <body>
+	<div class="dialog text-center" style="display:none;">
+		Odkaz bol skopirovany do schranky.
+	</div>
+<div class="buttons">
+	<div class="previousGallery" style="display: none;" title="Novšia galéria"><a href=""><div class="galleryPreviousButton"></div></a></div>
+	<a class="galleryButton" href="/">Späť na albumy</a>
+	<div class="nextGallery" style="display: none;" title="Staršia galéria"><a href=""><div class="galleryNextButton"></div></a></div>
+</div>
+<div class="album-header">
 	<div>
-<a href="/">Home</a></div>
+		<h1 class="album-header-title"></h1>
+		<p class="album-header-description"></p>
+		<a href="#" class="album-share" title="Zdieľať galériu"></a>
+	</div>
+</div>
+<div id="mygallery" >
 <?php
 
 $api_key='4ae001246d441920120d36bf2086a92d';	
@@ -39,21 +55,28 @@ if (array_key_exists('id', $_REQUEST)) {
 		echo '<a class="img-container" title="'.$photo->id.'" href="?id='.$photo->id.'">
 				<img src="'.Demo::createPhotos($farm_id,$server_id,$photo_id,$secret,$size).'">
 			</a>';
+			
 	}
 	Debugger::barDump($photos->photoset->photo,'photos');
 }else{
 
-	foreach ($x->photosets->photoset as $photoset) {
+	foreach ($x->photosets->photoset as $key=>$photoset) {
 		$farm_id=$photoset->farm;
 		$server_id=$photoset->server;
 		$photo_id=$photoset->primary;
 		$secret=$photoset->secret;
-		$size='q';
+		$size='w';
 	
-		echo '<a class="img-container" title="'.$photoset->id.'" href="?id='.$photoset->id.'">
-				<img src="'.Demo::createPhotos($farm_id,$server_id,$photo_id,$secret,$size).'">
-				<span>'.$photoset->title->_content.'</span>
-			</a>';
+		echo '<div id="72157716208936413" gallerynumber="'.$key.'" class="album" style="background-image: url(&quot;'.Demo::createPhotos($farm_id,$server_id,$photo_id,$secret,$size).'&quot;);">
+		<div class="galleryBackground"><div class="galleryInfo">
+		<div class="galleryDesc">
+			<a>'.$photoset->title->_content.'</a>
+		</div>
+		<button class="shareButton plain-button" title="Zdieľať galériu" style="height: 0px;"><a class="shareGallery"></a></button>
+		</div></div>
+		</div>
+		';
+			// <div id="72157716208936413" gallerynumber="0" class="album" style="background-image: url(&quot;https://farm5.staticflickr.com//65535//50404830328_14dafbaee0_n.jpg&quot;);"><div class="galleryBackground"><div class="galleryInfo"><div class="galleryDesc"><a>Otvorenie skautského roka 2020/21</a></div><button class="shareButton plain-button" title="Zdieľať galériu" style="height: 0px;"><a class="shareGallery"></a></button></div></div></div>
 	}
 }
 
@@ -84,8 +107,10 @@ break;
 //secret api key 	d663ff1650c4ea2b 
 //userid 			147245078@N03
 ?>
+</div>
 
-
-
+<script type="text/javascript" src="assets/jquery.min.js"></script>
+<script type="text/javascript" src="assets/jquery-ui.min.js"></script>
+<script src="assets/gallery_script.js" type="text/javascript"></script>
 </body>
 </html>
