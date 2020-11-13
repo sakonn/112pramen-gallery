@@ -55,6 +55,7 @@ if ($_REQUEST != null) {
 			</a>';
 	}
 }
+
 /*
 foreach ($photosets->photoset as $value) {
 	$photoset_id = 	$value->id;
