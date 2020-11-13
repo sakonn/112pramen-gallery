@@ -11,5 +11,13 @@
             "name": "Jakub Korečko",
             "email": "jakub@korymont.eu"
         }
-    ]
+    ],
+    "require": {
+        "components/jquery": "^3.5"
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "php -r \"copy('vendor/components/jquery/jquery.min.js', 'assets/jquery.min.js');\""
+        ]
+    }
 }

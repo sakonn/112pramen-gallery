@@ -1,6 +1,7 @@
 <?php  
 //tracy-developer tool
 require __DIR__ . '/vendor/autoload.php';
+include 'demo.php';
 
 use Tracy\Debugger;
 Debugger::enable(Debugger::DEVELOPMENT);
@@ -10,14 +11,13 @@ Debugger::enable(Debugger::DEVELOPMENT);
 <html>
 <head>
 	<title>web</title>
-	<script type="text/javascript" src="jquery-3.5.1.js"></script>
-	<link rel="stylesheet" type="text/css" href="gallery_style.css">
+	<script type="text/javascript" src="assets/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="assets/gallery_style.css">
 </head>
 <body>
 	<div>
 <a href="/">Home</a></div>
-<?php 
-include 'demo.php';
+<?php
 
 $api_key='4ae001246d441920120d36bf2086a92d';	
 $x = json_decode(file_get_contents('https://www.flickr.com/services/rest/?method=flickr.photosets.getList&api_key='.$api_key.'&user_id=147245078%40N03&format=json&nojsoncallback=1'));
