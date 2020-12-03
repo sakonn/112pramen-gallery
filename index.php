@@ -35,7 +35,130 @@ Debugger::enable(Debugger::DEVELOPMENT);
 </div>
 
 <div class="demo">
-<div style="margin: 10px;width: 20%;">
+	<div class="customCover">
+		<div class="customGal">
+			<div id="72157716208936413" gallerynumber="0" class="customAlb" style="background-image: url(&quot;https://farm66.staticflickr.com/65535/50404830328_14dafbaee0_w.jpg&quot;);"></div>
+			<div class="customDesc">
+				<div class="">
+					<a>Otvorenie skautského roka 2020/21</a>
+				</div>
+			</div>
+			<div class="customInfo">
+				<span class="customSum">
+					88 fotiek
+				</span>
+				<span class="customShare">
+					Zdieľať
+				</span>
+			</div>
+		</div>
+	</div>
+	<div style="margin: 10px;width: 20%;">
+		<div class="customGal">
+			<div id="72157716208936413" gallerynumber="0" class="customAlb" style="background-image: url(&quot;https://farm66.staticflickr.com/65535/50404830328_14dafbaee0_w.jpg&quot;);">
+				<div class="">
+				</div>
+			</div>
+			<div class="customDesc">
+				<div class="">
+					<a>Otvorenie skautského roka 2020/21</a>
+				</div>
+			</div>
+			<div class="customInfo">
+				<span class="customSum">
+					88 fotiek
+				</span>
+				<span class="customShare">
+					Zdieľať
+				</span>
+			</div>
+		</div>
+	</div>
+	<div style="margin: 10px;width: 20%;">
+		<div class="customGal">
+			<div id="72157716208936413" gallerynumber="0" class="customAlb" style="background-image: url(&quot;https://farm66.staticflickr.com/65535/50404830328_14dafbaee0_w.jpg&quot;);">
+				<div class="">
+				</div>
+			</div>
+			<div class="customDesc">
+				<div class="">
+					<a>Otvorenie skautského roka 2020/21</a>
+				</div>
+			</div>
+			<div class="customInfo">
+				<span class="customSum">
+					88 fotiek
+				</span>
+				<span class="customShare">
+					Zdieľať
+				</span>
+			</div>
+		</div>
+	</div>
+	<div style="margin: 10px;width: 20%;">
+		<div class="customGal">
+			<div id="72157716208936413" gallerynumber="0" class="customAlb" style="background-image: url(&quot;https://farm66.staticflickr.com/65535/50404830328_14dafbaee0_w.jpg&quot;);">
+				<div class="">
+				</div>
+			</div>
+			<div class="customDesc">
+				<div class="">
+					<a>Otvorenie skautského roka 2020/21</a>
+				</div>
+			</div>
+			<div class="customInfo">
+				<span class="customSum">
+					88 fotiek
+				</span>
+				<span class="customShare">
+					Zdieľať
+				</span>
+			</div>
+		</div>
+	</div>
+	<div style="margin: 10px;width: 20%;">
+		<div class="customGal">
+			<div id="72157716208936413" gallerynumber="0" class="customAlb" style="background-image: url(&quot;https://farm66.staticflickr.com/65535/50404830328_14dafbaee0_w.jpg&quot;);">
+				<div class="">
+				</div>
+			</div>
+			<div class="customDesc">
+				<div class="">
+					<a>Otvorenie skautského roka 2020/21</a>
+				</div>
+			</div>
+			<div class="customInfo">
+				<span class="customSum">
+					88 fotiek
+				</span>
+				<span class="customShare">
+					Zdieľať
+				</span>
+			</div>
+		</div>
+	</div>
+	<div style="margin: 10px;width: 20%;">
+		<div class="customGal">
+			<div id="72157716208936413" gallerynumber="0" class="customAlb" style="background-image: url(&quot;https://farm66.staticflickr.com/65535/50404830328_14dafbaee0_w.jpg&quot;);">
+				<div class="">
+				</div>
+			</div>
+			<div class="customDesc">
+				<div class="">
+					<a>Otvorenie skautského roka 2020/21</a>
+				</div>
+			</div>
+			<div class="customInfo">
+				<span class="customSum">
+					88 fotiek
+				</span>
+				<span class="customShare">
+					Zdieľať
+				</span>
+			</div>
+		</div>
+	</div>
+	<div style="margin: 10px;width: 20%;">
 	<div class="customGal">
 		<div id="72157716208936413" gallerynumber="0" class="customAlb" style="background-image: url(&quot;https://farm66.staticflickr.com/65535/50404830328_14dafbaee0_w.jpg&quot;);">
 			<div class="">
@@ -55,152 +178,12 @@ Debugger::enable(Debugger::DEVELOPMENT);
 			</span>
 		</div>
 	</div>
-</div>
-<div style="margin: 10px;width: 20%;">
-	<div class="customGal">
-		<div id="72157716208936413" gallerynumber="0" class="customAlb" style="background-image: url(&quot;https://farm66.staticflickr.com/65535/50404830328_14dafbaee0_w.jpg&quot;);">
-			<div class="">
-			</div>
-		</div>
-		<div class="customDesc">
-			<div class="">
-				<a>Otvorenie skautského roka 2020/21</a>
-			</div>
-		</div>
-		<div class="customInfo">
-			<span class="customSum">
-				88 fotiek
-			</span>
-			<span class="customShare">
-				Zdieľať
-			</span>
-		</div>
-	</div>
-</div>
-<div style="margin: 10px;width: 20%;">
-	<div class="customGal">
-		<div id="72157716208936413" gallerynumber="0" class="customAlb" style="background-image: url(&quot;https://farm66.staticflickr.com/65535/50404830328_14dafbaee0_w.jpg&quot;);">
-			<div class="">
-			</div>
-		</div>
-		<div class="customDesc">
-			<div class="">
-				<a>Otvorenie skautského roka 2020/21</a>
-			</div>
-		</div>
-		<div class="customInfo">
-			<span class="customSum">
-				88 fotiek
-			</span>
-			<span class="customShare">
-				Zdieľať
-			</span>
-		</div>
-	</div>
-</div>
-<div style="margin: 10px;width: 20%;">
-	<div class="customGal">
-		<div id="72157716208936413" gallerynumber="0" class="customAlb" style="background-image: url(&quot;https://farm66.staticflickr.com/65535/50404830328_14dafbaee0_w.jpg&quot;);">
-			<div class="">
-			</div>
-		</div>
-		<div class="customDesc">
-			<div class="">
-				<a>Otvorenie skautského roka 2020/21</a>
-			</div>
-		</div>
-		<div class="customInfo">
-			<span class="customSum">
-				88 fotiek
-			</span>
-			<span class="customShare">
-				Zdieľať
-			</span>
-		</div>
-	</div>
-</div>
-<div style="margin: 10px;width: 20%;">
-	<div class="customGal">
-		<div id="72157716208936413" gallerynumber="0" class="customAlb" style="background-image: url(&quot;https://farm66.staticflickr.com/65535/50404830328_14dafbaee0_w.jpg&quot;);">
-			<div class="">
-			</div>
-		</div>
-		<div class="customDesc">
-			<div class="">
-				<a>Otvorenie skautského roka 2020/21</a>
-			</div>
-		</div>
-		<div class="customInfo">
-			<span class="customSum">
-				88 fotiek
-			</span>
-			<span class="customShare">
-				Zdieľať
-			</span>
-		</div>
-	</div>
-</div>
-<div style="margin: 10px;width: 20%;">
-	<div class="customGal">
-		<div id="72157716208936413" gallerynumber="0" class="customAlb" style="background-image: url(&quot;https://farm66.staticflickr.com/65535/50404830328_14dafbaee0_w.jpg&quot;);">
-			<div class="">
-			</div>
-		</div>
-		<div class="customDesc">
-			<div class="">
-				<a>Otvorenie skautského roka 2020/21</a>
-			</div>
-		</div>
-		<div class="customInfo">
-			<span class="customSum">
-				88 fotiek
-			</span>
-			<span class="customShare">
-				Zdieľať
-			</span>
-		</div>
-	</div>
-</div>
-<div style="margin: 10px;width: 20%;">
-	<div class="customGal">
-		<div id="72157716208936413" gallerynumber="0" class="customAlb" style="background-image: url(&quot;https://farm66.staticflickr.com/65535/50404830328_14dafbaee0_w.jpg&quot;);">
-			<div class="">
-			</div>
-		</div>
-		<div class="customDesc">
-			<div class="">
-				<a>Otvorenie skautského roka 2020/21</a>
-			</div>
-		</div>
-		<div class="customInfo">
-			<span class="customSum">
-				88 fotiek
-			</span>
-			<span class="customShare">
-				Zdieľať
-			</span>
-		</div>
 	</div>
 </div>
 
-<div>
-	<div id="72157716208936413" gallerynumber="0" class="album" style="background-image: url(&quot;https://farm66.staticflickr.com/65535/50404830328_14dafbaee0_w.jpg&quot;);">
-		<div class="galleryBackground"><div class="galleryInfo">
-		<div class="galleryDesc">
-			<a>Otvorenie skautského roka 2020/21</a>
-		</div>
-		</div></div>
-		</div>
-</div>
-</div>
-
-<div id="mygallery" >
-
-
-
+<div id="customMyGallery" >
 
 <?php
-
 $api_key='4ae001246d441920120d36bf2086a92d';	
 $x = json_decode(file_get_contents('https://www.flickr.com/services/rest/?method=flickr.photosets.getList&api_key='.$api_key.'&user_id=147245078%40N03&format=json&nojsoncallback=1'));
 
@@ -223,16 +206,43 @@ if (array_key_exists('id', $_REQUEST)) {
 			
 	}
 	Debugger::barDump($photos->photoset->photo,'photos');
-}else{
+} else {
 
 	foreach ($x->photosets->photoset as $key=>$photoset) {
+		Debugger::barDump($photoset);
 		$farm_id=$photoset->farm;
 		$server_id=$photoset->server;
 		$photo_id=$photoset->primary;
 		$secret=$photoset->secret;
 		$size='w';
 	
-		echo '<div id="72157716208936413" gallerynumber="'.$key.'" class="album" style="background-image: url(&quot;'.Demo::createPhotos($farm_id,$server_id,$photo_id,$secret,$size).'&quot;);">
+		echo '
+		<div class="customCover">
+			<div class="customGal">
+				<img id="'.$photoset->id.'" gallerynumber="'.$key.'" class="customAlb"src="'.Demo::createPhotos($farm_id,$server_id,$photo_id,$secret,$size).'" alt="">
+				<div class="customDesc">
+						<a>'.$photoset->title->_content.'</a>
+				</div>
+				<div class="customInfo">
+					<span class="customSum">
+					'.$photoset->count_photos.' fotiek
+					</span>
+					<span class="customShare">
+						Zdieľať
+					</span>
+				</div>
+			</div>
+		</div>
+		
+		';
+			// <div id="72157716208936413" gallerynumber="0" class="album" style="background-image: url(&quot;https://farm5.staticflickr.com//65535//50404830328_14dafbaee0_n.jpg&quot;);"><div class="galleryBackground"><div class="galleryInfo"><div class="galleryDesc"><a>Otvorenie skautského roka 2020/21</a></div><button class="shareButton plain-button" title="Zdieľať galériu" style="height: 0px;"><a class="shareGallery"></a></button></div></div></div>
+	}
+}
+
+/*
+
+
+		<div id="'.$id.'" gallerynumber="'.$key.'" class="album" style="background-image: url(&quot;'.Demo::createPhotos($farm_id,$server_id,$photo_id,$secret,$size).'&quot;);">
 		<div class="galleryBackground"><div class="galleryInfo">
 		<div class="galleryDesc">
 			<a>'.$photoset->title->_content.'</a>
@@ -240,12 +250,7 @@ if (array_key_exists('id', $_REQUEST)) {
 		<button class="shareButton plain-button" title="Zdieľať galériu" style="height: 0px;"><a class="shareGallery"></a></button>
 		</div></div>
 		</div>
-		';
-			// <div id="72157716208936413" gallerynumber="0" class="album" style="background-image: url(&quot;https://farm5.staticflickr.com//65535//50404830328_14dafbaee0_n.jpg&quot;);"><div class="galleryBackground"><div class="galleryInfo"><div class="galleryDesc"><a>Otvorenie skautského roka 2020/21</a></div><button class="shareButton plain-button" title="Zdieľať galériu" style="height: 0px;"><a class="shareGallery"></a></button></div></div></div>
-	}
-}
 
-/*
 foreach ($photosets->photoset as $value) {
 	$photoset_id = 	$value->id;
 	

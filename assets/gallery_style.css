@@ -605,24 +605,32 @@ body.lb-disable-scrolling {
 	font-family: 'Nunito Sans', sans-serif;
 }
 
-.demo{
+#customMyGallery {
+	text-align: center;
 	width: 100%;
 	display: flex;
 	flex-wrap: wrap;
+	justify-content: space-evenly;
 }
+
+.demo{
+	display: none;
+	width: 100%;
+	flex-wrap: wrap;
+}
+
 .customGal{
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	background-color: #66ccffcc;
-	
 	border-radius: 20px;
+	padding: 8px;
 }
 
 .customGal .customAlb {
-	margin: 10px;
-	width: 250px;
+	width: 100%;
 	height: 200px;
 	background-position: 50%;
 	background-size: cover;
@@ -631,7 +639,6 @@ body.lb-disable-scrolling {
 }
 
 .customGal .customDesc {
-	
 	font-size: 18px;
 	font-weight: bold;
 	font-family: 'Nunito Sans', sans-serif;
@@ -646,4 +653,9 @@ body.lb-disable-scrolling {
 	justify-content: space-evenly;
 	font-family: 'Nunito Sans', sans-serif;
 	font-size: 12px;
+}
+
+.customCover {
+	width: 20%;
+	padding: 10px;
 }
