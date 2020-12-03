@@ -4,7 +4,5 @@ class Demo{
 		$img = 'https://farm'.$farm_id.'.staticflickr.com/'.$server_id.'/'.$photo_id.'_'.$secret.'_'.$size.'.jpg';
 		return $img;
 	}
-
-} 
- 
+}
 ?>

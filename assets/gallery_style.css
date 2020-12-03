@@ -90,8 +90,9 @@ body{
 	margin: 10px;
 	display: -ms-inline-flexbox;
 	display: inline-flex;
-	width: 200px;
-	height: 155px;
+	justify-content: end;
+	width: 250px;
+	height: 200px;
 	background-position: 50%;
 	background-size: cover;
 	-ms-flex-flow: column;
@@ -100,12 +101,12 @@ body{
 }
 
 .galleryBackground {
-	width: inherit;
-	left: -1px;
-	height: 210px;
-	background: linear-gradient(0deg, rgba(0, 0, 0, 0.9) 0, transparent 50%, transparent);
+	width: 100%;
+	left: 0px;
+	height: 30%;
+	background: rgba(102, 204, 255, 0.8);
 	display: block;
-	position: relative
+	position: relative;
 }
 
 .galleryDesc {
@@ -150,7 +151,8 @@ body{
 	position: absolute;
 	bottom: 0px;
 	padding-bottom: 5px;
-	width: inherit
+	width: inherit;
+	color: black;
 }
 
 #mygallery .galleryImage {
@@ -592,7 +594,7 @@ body.lb-disable-scrolling {
 }
 
 #mygallery .galleryInfo a{
-    color: #fff;
+    color: black;
 }
 .album-header h1{
     font-size: 36px;
@@ -601,4 +603,47 @@ body.lb-disable-scrolling {
 
 .galleryDesc{
 	font-family: 'Nunito Sans', sans-serif;
+}
+
+.demo{
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+}
+.customGal{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: #66ccffcc;
+	
+	border-radius: 20px;
+}
+
+.customGal .customAlb {
+	margin: 10px;
+	width: 250px;
+	height: 200px;
+	background-position: 50%;
+	background-size: cover;
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+}
+
+.customGal .customDesc {
+	
+	font-size: 18px;
+	font-weight: bold;
+	font-family: 'Nunito Sans', sans-serif;
+	text-align: center;
+}
+
+.customGal .customInfo{
+	width: 100%;
+	margin-top: 5px;
+	margin-bottom: 15px;
+	display: flex;
+	justify-content: space-evenly;
+	font-family: 'Nunito Sans', sans-serif;
+	font-size: 12px;
 }

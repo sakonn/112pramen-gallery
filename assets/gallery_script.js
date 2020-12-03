@@ -4,7 +4,7 @@ $(".galleryBackground").hover(function() {
 },function() {
   var button = $(this).children().children().last();
   if ($( window ).width() > 768){
-    button.animate({height: "0px"}, 150);	
+   button.animate({height: "0px"}, 150);	
   }					
 });
 
