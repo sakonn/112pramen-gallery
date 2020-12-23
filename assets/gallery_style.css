@@ -23,3 +23,584 @@ body{
 	color: white;
 	background-color: rgba(0,0,0,0.6);
 }
+
+.plain-button {
+	border: none;
+	background: transparent
+}
+
+.buttons {
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-align: center;
+	align-items: center;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	margin: 5px
+}
+
+.galleryButton {
+	background-color: transparent;
+	border: 0px;
+	display: block;
+	color: #232323;
+	font-size: 18px;
+	font-weight: bold;
+	font-family: Proxima Nova, helvetica neue, helvetica, arial, sans-serif
+}
+
+.galleryButton:hover {
+	color: #606060
+}
+
+.galleryNextButton {
+	height: 40px;
+	width: 64px;
+	background-image: url("../images/right-arrow-black.png");
+	background-repeat: no-repeat
+}
+
+.galleryNextButton:hover {
+	opacity: 0.7
+}
+
+.galleryPreviousButton {
+	height: 40px;
+	width: 64px;
+	background-image: url("../images/left-arrow-black.png");
+	background-repeat: no-repeat
+}
+
+.galleryPreviousButton:hover {
+	opacity: 0.7
+}
+
+#galleryHeader {
+	text-align: left;
+	margin: 0px auto
+}
+
+.galleryCover {
+	width: 300px;
+	max-height: 300px;
+	margin: 2px
+}
+
+.album {
+	margin: 10px;
+	display: -ms-inline-flexbox;
+	display: inline-flex;
+	justify-content: end;
+	width: 250px;
+	height: 200px;
+	background-position: 50%;
+	background-size: cover;
+	-ms-flex-flow: column;
+	flex-flow: column;
+	border: 1px solid gray
+}
+
+.galleryBackground {
+	width: 100%;
+	left: 0px;
+	height: 30%;
+	background: rgba(102, 204, 255, 0.8);
+	display: block;
+	position: relative;
+}
+
+.galleryDesc {
+	display: block;
+	word-wrap: break-word;
+	width: 100%;
+	bottom: 0;
+	text-align: center;
+	color: black;
+	margin: 0px auto;
+	padding: 0 2px
+}
+
+.galleryDesc a {
+	margin: 0px;
+	min-height: 40px;
+	font-size: 18px;
+	color: white;
+	font-weight: bold;
+	text-shadow: 0px 0px
+}
+
+.galleryDesc a:hover {
+	color: white;
+	text-decoration: none
+}
+
+.shareButton {
+	display: block;
+	width: 100%;
+	opacity: 0.5
+}
+
+.shareGallery {
+	display: block;
+	background: url("../images/export.svg") no-repeat center center;
+	height: 100%;
+	width: inherit
+}
+
+.galleryInfo {
+	position: absolute;
+	bottom: 0px;
+	padding-bottom: 5px;
+	width: inherit;
+	color: black;
+}
+
+#mygallery .galleryImage {
+	margin: 2px;
+	width: auto
+}
+
+.galleryImage:hover {
+	opacity: 0.5 !important
+}
+
+#mygallery {
+	text-align: center
+}
+
+.lb-nav a.lb-next {
+	height: 85%
+}
+
+.lb-nav a.lb-prev {
+	height: 85%
+}
+
+.lb-nav a.lb-download {
+	width: 100%;
+	display: block;
+	height: 15%;
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	background: url("../images/download.svg") center no-repeat
+}
+
+.album-header {
+	height: 200px;
+	margin: auto;
+	background-repeat: no-repeat;
+	background-position: 50% 25%;
+	background-size: cover;
+	display: none
+}
+
+.album-header div:first-child {
+	height: 100%;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.9);
+	opacity: 0.7
+}
+
+.album-header .album-share {
+	display: block;
+	height: 40%;
+	width: 100%;
+	background: url("../images/export.svg") no-repeat center center
+}
+
+.album-header h1 {
+	color: white;
+	margin: 0px auto;
+	text-align: center;
+	padding-top: 20px
+}
+
+.album-header p {
+	font-size: 15px;
+	text-align: center;
+	color: white
+}
+
+.no-close .ui-dialog-titlebar-close {
+	display: none
+}
+
+.loadMore {
+	display: block;
+	height: auto;
+	width: 100%;
+	color: #232323
+}
+
+.loadMore:hover {
+	text-decoration: none;
+	color: #606060
+}
+
+.ui-dialog-titlebar {
+	display: none
+}
+
+#pagination {
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	-ms-flex-pack: center;
+	justify-content: center
+}
+
+#pagination button {
+	background-color: transparent;
+	box-shadow: none;
+	border: 2px solid black;
+	border-radius: 5px;
+	margin: 2px 3px;
+	width: 40px;
+	height: 40px;
+	font-size: 17px;
+	font-weight: 700;
+	text-align: center;
+	transition: background-color 0.5s
+}
+
+#pagination button:hover {
+	background-color: rgba(96, 96, 96, 0.3)
+}
+
+#pagination .active {
+	background-color: rgba(96, 96, 96, 0.3)
+}
+
+@media (min-width: 768px) {
+	.lb-nav a.lb-download {
+			opacity: 0;
+			transition: opacity 600ms;
+			-webkit-transition: opacity 600ms;
+			-moz-transition: opacity 600ms;
+			-o--transition: opacity 600ms
+	}
+	.lb-nav a.lb-download:hover {
+			opacity: 1
+	}
+}
+
+@media (max-width: 768px) {
+	.lb-nav a.lb-download {
+			opacity: 1;
+			height: 14%;
+			bottom: 1%;
+			background: url("../images/download-mobile.svg") center no-repeat
+	}
+	.shareButton {
+			height: 30px !important
+	}
+}
+
+body:after {
+	content: url(../images/close.png) url(../images/loading.gif) url(../images/prev.png) url(../images/next.png);
+	display: none
+}
+
+body.lb-disable-scrolling {
+	overflow: hidden
+}
+
+.lightboxOverlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 9999;
+	background-color: black;
+	filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+	opacity: 0.8;
+	display: none;
+	width: 100%;
+	height: 100%
+}
+
+.lightbox {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	z-index: 10000;
+	text-align: center;
+	line-height: 0;
+	font-weight: normal
+}
+
+.lightbox .lb-image {
+	display: block;
+	height: auto;
+	max-width: inherit;
+	max-height: none;
+	border-radius: 3px;
+	padding: 0px;
+	border: 4px solid white
+}
+
+.lightbox a img {
+	border: none
+}
+
+.lb-outerContainer {
+	position: relative;
+	*zoom: 1;
+	width: 250px;
+	height: 250px;
+	margin: 0 auto;
+	border-radius: 4px;
+	background-color: white
+}
+
+.lb-outerContainer:after {
+	content: "";
+	display: table;
+	clear: both
+}
+
+.lb-loader {
+	position: absolute;
+	top: 43%;
+	left: 0;
+	height: 25%;
+	width: 100%;
+	text-align: center;
+	line-height: 0
+}
+
+.lb-cancel {
+	display: block;
+	width: 32px;
+	height: 32px;
+	margin: 0 auto;
+	background: url(../images/loading.gif) no-repeat
+}
+
+.lb-nav {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 10
+}
+
+.lb-container>.nav {
+	left: 0
+}
+
+.lb-nav a {
+	outline: none;
+	background-image: url("data:image/gif;base64,R0lGODlhAQABAPAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==")
+}
+
+.lb-prev,
+.lb-next {
+	height: 100%;
+	cursor: pointer;
+	display: block
+}
+
+.lb-nav a.lb-prev {
+	width: 34%;
+	left: 0;
+	float: left;
+	background: url(../images/prev.png) left 48% no-repeat;
+	filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+	opacity: 0;
+	transition: opacity 0.6s
+}
+
+.lb-nav a.lb-prev:hover {
+	filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+	opacity: 1
+}
+
+.lb-nav a.lb-next {
+	width: 64%;
+	right: 0;
+	float: right;
+	background: url(../images/next.png) right 48% no-repeat;
+	filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+	opacity: 0;
+	transition: opacity 0.6s
+}
+
+.lb-nav a.lb-next:hover {
+	filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+	opacity: 1
+}
+
+.lb-dataContainer {
+	margin: 0 auto;
+	padding-top: 5px;
+	*zoom: 1;
+	width: 100%;
+	border-bottom-left-radius: 4px;
+	border-bottom-right-radius: 4px
+}
+
+.lb-dataContainer:after {
+	content: "";
+	display: table;
+	clear: both
+}
+
+.lb-data {
+	padding: 0 4px;
+	color: #ccc
+}
+
+.lb-data .lb-details {
+	width: 85%;
+	float: left;
+	text-align: left;
+	line-height: 1.1em
+}
+
+.lb-data .lb-caption {
+	font-size: 13px;
+	font-weight: bold;
+	line-height: 1em
+}
+
+.lb-data .lb-caption a {
+	color: #4ae
+}
+
+.lb-data .lb-number {
+	display: block;
+	clear: left;
+	padding-bottom: 1em;
+	font-size: 12px;
+	color: #999999
+}
+
+.lb-data .lb-close {
+	display: block;
+	float: right;
+	width: 30px;
+	height: 30px;
+	background: url(../images/close.png) top right no-repeat;
+	text-align: right;
+	outline: none;
+	filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+	opacity: 0.7;
+	transition: opacity 0.2s
+}
+
+.lb-data .lb-close:hover {
+	cursor: pointer;
+	filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+	opacity: 1
+}
+/*!
+ * Justified Gallery - v3.6.3
+ * http://miromannino.github.io/Justified-Gallery/
+ * Copyright (c) 2016 Miro Mannino
+ * Licensed under the MIT license.
+ */
+ .justified-gallery {
+	width: 100%;
+	position: relative;
+	overflow: hidden
+}
+
+.justified-gallery>a {
+	position: absolute;
+	display: inline-block;
+	overflow: hidden;
+	filter: "alpha(opacity=10)";
+	opacity: 0.1
+}
+
+.justified-gallery>a>img,
+.justified-gallery>div>img,
+.justified-gallery>a>a>img,
+.justified-gallery>div>a>img {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: 0;
+	padding: 0;
+	border: none;
+	filter: "alpha(opacity=0)";
+	opacity: 0
+}
+
+.justified-gallery>a>.caption,
+.justified-gallery>div>.caption {
+	display: none;
+	position: absolute;
+	bottom: 0;
+	padding: 5px;
+	background-color: #000000;
+	left: 0;
+	right: 0;
+	margin: 0;
+	color: white;
+	font-size: 12px;
+	font-weight: 300;
+	font-family: sans-serif
+}
+
+.justified-gallery>a>.caption.caption-visible,
+.justified-gallery>div>.caption.caption-visible {
+	display: initial;
+	filter: "alpha(opacity=70)";
+	opacity: 0.7;
+	transition: opacity 500ms ease-in
+}
+
+.justified-gallery>.entry-visible {
+	filter: "alpha(opacity=100)";
+	opacity: 1;
+	background: none
+}
+
+.justified-gallery>.entry-visible>img,
+.justified-gallery>.entry-visible>a>img {
+	filter: "alpha(opacity=100)";
+	opacity: 1;
+	transition: opacity 500ms ease-in
+}
+
+.justified-gallery>.jg-filtered {
+	display: none
+}
+
+.justified-gallery>.spinner {
+	position: absolute;
+	bottom: 0;
+	margin-left: -24px;
+	padding: 10px 0 10px 0;
+	left: 50%;
+	filter: "alpha(opacity=100)";
+	opacity: 1;
+	overflow: initial
+}
+
+.justified-gallery>.spinner>span {
+	display: inline-block;
+	filter: "alpha(opacity=0)";
+	opacity: 0;
+	width: 8px;
+	height: 8px;
+	margin: 0 4px 0 4px;
+	background-color: #000;
+	border-radius: 6px
+}
+
+#mygallery .galleryInfo a{
+    color: black;
+}
+.album-header h1{
+    font-size: 36px;
+    font-weight: 500;
+}
+
+.galleryDesc{
+	font-family: 'Nunito Sans', sans-serif;
+}

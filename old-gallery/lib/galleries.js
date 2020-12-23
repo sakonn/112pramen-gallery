@@ -90,7 +90,7 @@ function loadAlbumsData(withAlbums, galleryData){
 						share.appendChild(shareGallery);
 					}
 				}
-
+				
 				$(".galleryBackground").hover(function() {
 					var button = $(this).children().children().last();
 					button.animate({height: "40px"}, 150);
