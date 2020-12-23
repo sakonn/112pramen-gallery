@@ -16,6 +16,8 @@ Debugger::enable(Debugger::DEVELOPMENT);
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap" rel="stylesheet"> 
 	<link rel="stylesheet" type="text/css" href="assets/gallery_style.css">
+	<link rel="stylesheet" type="text/css" href="assets/albums.css">
+	<link rel="stylesheet" type="text/css" href="assets/album.css">
 </head>
 <body>
 
@@ -33,7 +35,7 @@ if (array_key_exists('id', $_REQUEST)) {
 }
 
 //api key 			4ae001246d441920120d36bf2086a92d
-//secret api key 	d663ff1650c4ea2b 
+//secret api key 	d663ff1650c4ea2b
 //userid 			147245078@N03
 ?>
 
