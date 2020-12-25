@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+
+:root {
+    --color1: #1A7EA3;
+    --color2: #12CAB7;
+    --white: #FFFFFF;
+    --beige: #FEFAF0;
+    --black: #000000;
+    --discord: #2F2F2F;
+}
+
+body {
+    font-family: 'Roboto', sans-serif !important;
+}
+
+.customCover {
+    min-width: 200px;
+    max-width: 260px;
+    border-radius: 10px;
+    transition: 0.2s;
+}
+
+.customGal {
+    padding: 0px;
+    background-color: var(--discord);
+    color: var(--beige);
+    filter: saturate(100%);
+    filter: brightness(100%);
+    transition: 0.2s;
+}
+
+.customAlb {
+    transition: 0.2s;
+}
+
+/* All hover effects */
+.customGal:hover {
+    box-shadow: 5px 5px 20px var(--discord);
+    scale: 103%;
+}
+
+.customGal:hover > .customAlb {
+    filter: saturate(120%);
+    filter: brightness(110%);
+}
+
+.customGal:hover > .customLink {
+    height: 105%;
+}
+
+
+.customLink {
+    color: var(--beige) !important;
+}
+
+.customImage {
+    background-position: center, center; /* Vycenteruje obrazok v nahladovke kazdej galerie */
+}
