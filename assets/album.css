@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
-
 :root {
     --color1: #1A7EA3;
     --color2: #12CAB7;
@@ -7,10 +5,6 @@
     --beige: #FEFAF0;
     --black: #000000;
     --discord: #2F2F2F;
-}
-
-body {
-    font-family: 'Roboto', sans-serif !important;
 }
 
 .customCover {
@@ -36,7 +30,7 @@ body {
 /* All hover effects */
 .customGal:hover {
     box-shadow: 5px 5px 20px var(--discord);
-    scale: 103%;
+    transform: scale(1.025);
 }
 
 .customGal:hover > .customAlb {
