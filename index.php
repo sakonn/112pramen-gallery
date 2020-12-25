@@ -25,7 +25,7 @@ Debugger::enable(Debugger::DEVELOPMENT);
 $api_key='4ae001246d441920120d36bf2086a92d';	
 $x = json_decode(file_get_contents('https://www.flickr.com/services/rest/?method=flickr.photosets.getList&api_key='.$api_key.'&user_id=147245078%40N03&format=json&nojsoncallback=1'));
 
-Debugger::barDump($_REQUEST,'req');
+Debugger::barDump($_REQUEST,'querry string');
 Debugger::barDump($x->photosets->photoset[0],'object');
 
 if (array_key_exists('id', $_REQUEST)) {
@@ -42,5 +42,6 @@ if (array_key_exists('id', $_REQUEST)) {
 <script type="text/javascript" src="assets/jquery.min.js"></script>
 <script type="text/javascript" src="assets/jquery-ui.min.js"></script>
 <script src="assets/gallery_script.js" type="text/javascript"></script>
+<script type="text/javascript" src="assets/lightbox.js"></script>
 </body>
 </html>
