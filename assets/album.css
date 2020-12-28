@@ -38,10 +38,12 @@
     filter: brightness(110%);
 }
 
+
+/* #TEXT LIFT BUG
 .customGal:hover > .customLink {
     height: 105%;
 }
-
+*/
 
 .customLink {
     color: var(--beige) !important;
