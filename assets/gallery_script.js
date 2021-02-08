@@ -9,14 +9,12 @@ $(".galleryBackground").hover(function() {
 });
 
 // Share gallery from the gallerieS view (using sharebutton)
-$(document).on('click', '.shareButton', function(e){
+$(document).on('click', '.customShare', function(e){
   e.preventDefault();
   if (!e) var e = window.event;
   e.cancelBubble = true;
   if (e.stopPropagation) e.stopPropagation();
-  var albumID = $(this).parent().parent().parent().attr("id");
-  var link = window.location.href;
-  var shareLink = link + '?album=' + albumID;
+  var shareLink = $(this).attr('data-album-url');
   var $temp = $("<input>");
   $("body").append($temp);
   $temp.val(shareLink).select();

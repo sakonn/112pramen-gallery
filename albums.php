@@ -27,7 +27,7 @@
 					<span class="customSum">
 					'.$api->getAlbumPhotoCount($album).' fotiek
 					</span>
-					<span class="customShare">
+					<span class="customShare" data-album-url="'.$api->getAlbumURL($album).'">
 						Zdieľať
 					</span>
 				</div>
