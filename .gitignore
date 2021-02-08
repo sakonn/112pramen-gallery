@@ -2,3 +2,4 @@
 /public_html/
 /assets/jquery*
 .htaccess
+config.php
