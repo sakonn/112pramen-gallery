@@ -1,10 +1,15 @@
 <?php  
 //tracy-developer tool
 require __DIR__ . '/vendor/autoload.php';
-include 'classes.php';
+include 'config.php';
+include 'helpers.php';
+include 'classes/FlickrAPI.php';
+
+$api = new FlickrAPI($config['flickr']['key'], $config['flickr']['user'], $config['general']['albumsListing']);
 
 use Tracy\Debugger;
 Debugger::enable(Debugger::DEVELOPMENT);
+Debugger::$maxLength = 250;
 ?>
 
 <!DOCTYPE html>
@@ -22,11 +27,7 @@ Debugger::enable(Debugger::DEVELOPMENT);
 <body>
 
 <?php
-$api_key='4ae001246d441920120d36bf2086a92d';	
-$x = json_decode(file_get_contents('https://www.flickr.com/services/rest/?method=flickr.photosets.getList&api_key='.$api_key.'&user_id=147245078%40N03&format=json&nojsoncallback=1'));
-
-Debugger::barDump($_REQUEST,'req');
-Debugger::barDump($x->photosets->photoset[0],'object');
+//Debugger::barDump(getBaseURL());
 
 if (array_key_exists('id', $_REQUEST)) {
 	include 'album.php';
@@ -34,13 +35,10 @@ if (array_key_exists('id', $_REQUEST)) {
 	include 'albums.php';
 }
 
-//api key 			4ae001246d441920120d36bf2086a92d
-//secret api key 	d663ff1650c4ea2b
-//userid 			147245078@N03
 ?>
 
-<script type="text/javascript" src="assets/jquery.min.js"></script>
-<script type="text/javascript" src="assets/jquery-ui.min.js"></script>
-<script src="assets/gallery_script.js" type="text/javascript"></script>
+	<script type="text/javascript" src="assets/jquery.min.js"></script>
+	<script type="text/javascript" src="assets/jquery-ui.min.js"></script>
+	<script src="assets/gallery_script.js" type="text/javascript"></script>
 </body>
 </html>

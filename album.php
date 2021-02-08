@@ -19,21 +19,11 @@ Debugger::enable(Debugger::DEVELOPMENT);
 
 <div id="customMyGallery">
 <?php
-Debugger::fireLog('funguje to');
-	$photos = json_decode(file_get_contents( 'https://www.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key='.$api_key.'&photoset_id='.$_REQUEST['id'].'&user_id=147245078%40N03&format=json&nojsoncallback=1'));
-	foreach ($photos->photoset->photo as $photo) {
-		$farm_id=$photo->farm;
-		$server_id=$photo->server;
-		$photo_id=$photo->id;
-		$secret=$photo->secret;
-		$size='q';
-	
-		echo '<a class="img-container" title="'.$photo->id.'" href="?id='.$photo->id.'">
-				<img src="'.Photos::createPhotos($farm_id,$server_id,$photo_id,$secret,$size).'">
+	foreach ($api->getAlbumPhotos($_REQUEST['id']) as $photo) {
+		echo '<a class="img-container" title="'.$api->getPhotoID($photo).'" href="?id='.$api->getPhotoID($photo).'">
+				<img src="'.$api->getPhotoThumbnailURL($photo).'">
 			</a>';
-			
 	}
-  Debugger::barDump($photos->photoset->photo,'photos');
 ?>
 
 </div>
