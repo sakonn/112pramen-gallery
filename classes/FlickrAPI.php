@@ -4,16 +4,33 @@ use Tracy\Debugger;
 class FlickrAPI{
 	private $key;
   private $user;
+  private $albumListing;
+  private $albumsData;
 
-  public function __construct($apikey, $user){
+  public function __construct($apikey, $user, $albumListing){
     $this->key = $apikey;
     $this->user = $user;
+    $this->albumListing = $albumListing;
   }
 
   public function geAlbumsList(){
-    $x = json_decode(file_get_contents('https://www.flickr.com/services/rest/?method=flickr.photosets.getList&api_key='.$this->key.'&user_id='.$this->user.'&format=json&nojsoncallback=1'));
-
-    return $x->photosets->photoset;
+    if (array_key_exists('page', $_REQUEST)) {
+      $this->albumsData = json_decode(file_get_contents('https://www.flickr.com/services/rest/?method=flickr.photosets.getList'.
+      '&api_key='.$this->key.
+      '&user_id='.$this->user.
+      '&page='.$_REQUEST['page'].
+      '&per_page='.$this->albumListing.
+      '&format=json&nojsoncallback=1'));
+    } else {
+      $this->albumsData = json_decode(file_get_contents('https://www.flickr.com/services/rest/?method=flickr.photosets.getList'.
+      '&api_key='.$this->key.
+      '&user_id='.$this->user.
+      '&page=1'.
+      '&per_page='.$this->albumListing.
+      '&format=json&nojsoncallback=1'));
+    }
+    
+    return $this->albumsData->photosets->photoset;
   }
 
   public function getAlbumURL($album) {
@@ -42,6 +59,24 @@ class FlickrAPI{
   public function getAlbumPhotos($albumId) {
     $photos = json_decode(file_get_contents('https://www.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key='.$this->key.'&photoset_id='.$albumId.'&user_id='.$this->user.'&format=json&nojsoncallback=1'));
     return $photos->photoset->photo;
+  }
+  public function getAlbumPaginationRequired() {
+    if ($this->albumsData->photosets->perpage < $this->albumsData->photosets->total) {
+      return true;
+    }
+    return false;
+  }
+
+  public function getAlubmPagination() {
+    $pagination = [];
+    
+    for ($i=1; $i <= ceil($this->albumsData->photosets->total / $this->albumsData->photosets->perpage); $i++) { 
+      $pagination[$i] = [
+        'number' => $i,
+        'url' => $this->getBaseURL() . '/?page=' . $i,
+      ];
+    }
+    return $pagination;
   }
 
   public function getPhotoThumbnailURL($photo) {

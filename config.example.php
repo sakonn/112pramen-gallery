@@ -2,10 +2,11 @@
 $config = [
   'general' => [
     'api' => 'flickr',
-    'galleriesListing' => 30,
+    'albumsListing' => 28,
   ],
   'flickr' => [
     'key' => 'XXXXXXXXXXXX',
+    'secret_key' => 'XXXXXXXXXXXX',
     'user' => 'XXXXXXXXXXXX'
   ]
 ];
