@@ -17,7 +17,7 @@ class FlickrAPI{
   }
 
   public function getAlbumURL($album) {
-
+    
   }
 
   public function getAlbumID($album) {
@@ -44,10 +44,10 @@ class FlickrAPI{
     return $photos->photoset->photo;
   }
 
-  public function getPhotoURL($photo) {
+  public function getPhotoThumbnailURL($photo) {
 		$size='q';
     $img = 'https://farm'.$photo->farm.'.staticflickr.com/'.$photo->server.'/'.$photo->id.'_'.$photo->secret.'_'.$size.'.jpg';
-    
+
 		return $img;
   }
 

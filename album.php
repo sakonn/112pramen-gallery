@@ -21,7 +21,7 @@ Debugger::enable(Debugger::DEVELOPMENT);
 <?php
 	foreach ($api->getAlbumPhotos($_REQUEST['id']) as $photo) {
 		echo '<a class="img-container" title="'.$api->getPhotoID($photo).'" href="?id='.$api->getPhotoID($photo).'">
-				<img src="'.$api->getPhotoURL($photo).'">
+				<img src="'.$api->getPhotoThumbnailURL($photo).'">
 			</a>';
 	}
 ?>
