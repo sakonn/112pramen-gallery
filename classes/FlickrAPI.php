@@ -17,7 +17,7 @@ class FlickrAPI{
   }
 
   public function getAlbumURL($album) {
-    
+    return $this->getBaseURL() . '/?id=' . $this->getAlbumID($album);
   }
 
   public function getAlbumID($album) {
@@ -53,6 +53,10 @@ class FlickrAPI{
 
   public function getPhotoID($photo) {
     return $photo->id;
+  }
+
+  private function getBaseURL() {
+    return (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") ."://{$_SERVER['HTTP_HOST']}";
   }
 }
 ?>
