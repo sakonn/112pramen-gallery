@@ -1,29 +1,7 @@
-// Core variables and mixins
-@import "lg-variables";
-@import "lg-mixins";
-@import "lg-fonts";
-@import "lg-theme-default";
-@import "lg-thumbnail";
-@import "lg-video";
-@import "lg-autoplay";
-@import "lg-zoom";
-@import "lg-pager";
-@import "lg-fullscreen";
-@import "lg-share";
-@import "lg-rotate";
-
 // Clearfix
-.lg-group {
-    *zoom: 1;
-}
-
-.lg-group:before, .lg-group:after {
-    display: table;
-    content: "";
-    line-height: 0;
-}
-
 .lg-group:after {
+    content: "";
+    display: table;
     clear: both;
 }
 
@@ -35,6 +13,7 @@
     top: 0;
     left: 0;
     z-index: $zindex-outer;
+    text-align: left;
     opacity: 0;
     outline: none;
     // For start/end transition
@@ -103,16 +82,16 @@
 
     .lg-item {
         background: url("#{$lg-path-images}/loading.gif") no-repeat scroll center center transparent;
-        display: none !important; 
+        display: none !important;
     }
-    &.lg-css3{
-        .lg-prev-slide, .lg-current, .lg-next-slide{
-            display: inline-block !important; 
+    &.lg-css3 {
+        .lg-prev-slide, .lg-current, .lg-next-slide {
+            display: inline-block !important;
         }
     }
-    &.lg-css{
-        .lg-current{
-            display: inline-block !important; 
+    &.lg-css {
+        .lg-current {
+            display: inline-block !important;
         }
     }
 
@@ -180,13 +159,14 @@
         display: none;
     }
 
-    &.lg-hide-download{
-        #lg-download{
+    &.lg-hide-download {
+        #lg-download {
             display: none;
         }
     }
 }
-.lg-backdrop{
+
+.lg-backdrop {
     position: fixed;
     top: 0;
     left: 0;
@@ -196,7 +176,7 @@
     background-color: #000;
     opacity: 0;
     @include transition(opacity 0.15s ease 0s);
-    &.in{
+    &.in {
         opacity: $backdrop-opacity;
     }
 }

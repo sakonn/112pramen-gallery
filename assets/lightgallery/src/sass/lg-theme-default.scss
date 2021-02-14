@@ -12,9 +12,8 @@
         position: absolute;
         top: 50%;
         z-index: $zindex-controls;
-        outline: none;
         border: none;
-        background-color: transparent;
+        outline: none;
 
         &.disabled {
             pointer-events: none;

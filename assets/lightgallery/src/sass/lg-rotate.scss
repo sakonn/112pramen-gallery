@@ -26,13 +26,13 @@
         font-size: 26px;
     }
 }
-.lg-flip-hor {
-    &:after {
-        content: "\e902";
-    } 
-}
 .lg-flip-ver {
     &:after {
         content: "\e903";
+    } 
+}
+.lg-flip-hor {
+    &:after {
+        content: "\e902";
     } 
 }

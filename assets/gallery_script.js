@@ -31,3 +31,6 @@ $(document).on('click', '.customShare', function(e){
     }
   });
 });
+
+
+lightGallery(document.getElementById('lightgallery')); 

@@ -23,6 +23,7 @@ Debugger::$maxLength = 250;
 	<link rel="stylesheet" type="text/css" href="assets/gallery_style.css">
 	<link rel="stylesheet" type="text/css" href="assets/albums.css">
 	<link rel="stylesheet" type="text/css" href="assets/album.css">
+	<link type="text/css" rel="stylesheet" href="assets/lightgallery/css/lightgallery.css" /> 
 </head>
 <body>
 
@@ -39,6 +40,11 @@ if (array_key_exists('id', $_REQUEST)) {
 
 	<script type="text/javascript" src="assets/jquery.min.js"></script>
 	<script type="text/javascript" src="assets/jquery-ui.min.js"></script>
-	<script src="assets/gallery_script.js" type="text/javascript"></script>
+	<script type="text/javascript" src="assets/lightgallery/js/lightgallery.js"></script>
+
+	<!-- A jQuery plugin that adds cross-browser mouse wheel support. (Optional) -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
+	<script type="text/javascript" src="assets/gallery_script.js"></script>
 </body>
+
 </html>
