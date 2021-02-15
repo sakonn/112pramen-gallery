@@ -41,6 +41,12 @@ if (array_key_exists('id', $_REQUEST)) {
 	<script type="text/javascript" src="assets/jquery.min.js"></script>
 	<script type="text/javascript" src="assets/jquery-ui.min.js"></script>
 	<script type="text/javascript" src="assets/lightgallery/js/lightgallery.js"></script>
+	<script type="text/javascript" src="assets/lightgallery/modules/lg-autoplay.js"></script>
+	<script type="text/javascript" src="assets/lightgallery/modules/lg-fullscreen.js"></script>
+	<script type="text/javascript" src="assets/lightgallery/modules/lg-hash.js"></script>
+	<script type="text/javascript" src="assets/lightgallery/modules/lg-zoom.js"></script>
+	<script type="text/javascript" src="assets/lightgallery/modules/lg-rotate.js"></script>
+	<script type="text/javascript" src="assets/lightgallery/modules/lg-share.js"></script>
 
 	<!-- A jQuery plugin that adds cross-browser mouse wheel support. (Optional) -->
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>

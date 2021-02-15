@@ -33,4 +33,14 @@ $(document).on('click', '.customShare', function(e){
 });
 
 
-lightGallery(document.getElementById('lightgallery')); 
+$(function() {
+  $("#customMyGallery").lightGallery({
+    getCaptionFromTitleOrAlt: false,
+    autoplay: false,
+    googlePlus: false,
+    pinterest: false,
+    actualSize: false,
+    flipHorizontal: false,
+    flipVertical: false,
+  });
+});

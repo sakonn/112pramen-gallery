@@ -86,6 +86,13 @@ class FlickrAPI{
 		return $img;
   }
 
+  public function getPhotoLargeURL($photo) {
+		$size='b';
+    $img = 'https://farm'.$photo->farm.'.staticflickr.com/'.$photo->server.'/'.$photo->id.'_'.$photo->secret.'_'.$size.'.jpg';
+
+		return $img;
+  }
+
   public function getPhotoID($photo) {
     return $photo->id;
   }

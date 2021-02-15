@@ -20,7 +20,7 @@ Debugger::enable(Debugger::DEVELOPMENT);
 <div id="customMyGallery">
 <?php
 	foreach ($api->getAlbumPhotos($_REQUEST['id']) as $photo) {
-		echo '<a class="img-container" title="'.$api->getPhotoID($photo).'" href="'.$api->getPhotoThumbnailURL($photo).'">
+		echo '<a class="img-container" id="'.$api->getPhotoID($photo).'" href="'.$api->getPhotoLargeURL($photo).'">
 				<img src="'.$api->getPhotoThumbnailURL($photo).'">
 			</a>';
 	}
