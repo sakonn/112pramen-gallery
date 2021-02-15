@@ -34,13 +34,22 @@ $(document).on('click', '.customShare', function(e){
 
 
 $(function() {
-  $("#customMyGallery").lightGallery({
-    getCaptionFromTitleOrAlt: false,
-    autoplay: false,
-    googlePlus: false,
-    pinterest: false,
-    actualSize: false,
-    flipHorizontal: false,
-    flipVertical: false,
+  $("#customAlbum").justifiedGallery({
+    rowHeight : 220,
+    maxRowHeight: '200%',
+    margins : 3,
+    lastRow: 'center',
+    cssAnimation: true,
+    waitThumbnailsLoad: false,
+  }).on('jg.complete', function (e) {
+    $("#customAlbum").lightGallery({
+      getCaptionFromTitleOrAlt: false,
+      autoplay: false,
+      googlePlus: false,
+      pinterest: false,
+      actualSize: false,
+      flipHorizontal: false,
+      flipVertical: false,
+    });
   });
 });

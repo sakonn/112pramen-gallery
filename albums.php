@@ -9,7 +9,7 @@
 
 <div id="customMyGallery" >
 	<?php
-		foreach ($api->geAlbumsList() as $key=>$album) {
+		foreach ($api->getAlbumsList(array_key_exists('page', $_REQUEST) ? $_REQUEST['page'] : null) as $key=>$album) {
 			
 			echo '
 			<div class="customCover">
@@ -36,11 +36,11 @@
 </div>
 <?php
 
-if ($api->getAlbumPaginationRequired()) {
+if ($api->getAlbumsPaginationRequired()) {
 	echo '<div id="pagination" class="text-center">';
 	
 	$page = array_key_exists('page', $_REQUEST) ? $_REQUEST['page'] : 1;
-	foreach ($api->getAlubmPagination() as $key=>$item) {
+	foreach ($api->getAlubmsPagination() as $key=>$item) {
 		$active = ($page == $key) ? ' active' : '';
 		echo '
 		<a href="'.$item['url'].'">

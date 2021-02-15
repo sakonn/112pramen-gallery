@@ -5,9 +5,17 @@ use Tracy\Debugger;
 Debugger::enable(Debugger::DEVELOPMENT);
 ?>
 <div class="buttons">
-	<div class="previousGallery" style="display: none;" title="Novšia galéria"><a href=""><div class="galleryPreviousButton"></div></a></div>
-	<a class="galleryButton" href="/">Späť na albumy</a>
-	<div class="nextGallery" style="display: none;" title="Staršia galéria"><a href=""><div class="galleryNextButton"></div></a></div>
+<?php
+	//Debugger::barDump();
+	$siblings = $api->getAlbumSiblings($_REQUEST['id']);
+	if ($siblings[0] != null) {
+		echo '<div class="previousGallery" style="" title="'.$api->getAlbumTitle($siblings[0]).'"><a href="'.$api->getAlbumURL($siblings[0]).'"><div class="galleryPreviousButton"></div></a></div>';
+	}
+	echo '<a class="galleryButton" href="/">Späť na albumy</a>';
+	if ($siblings[1] != null) {
+		echo '<div class="nextGallery" style="" title="'.$api->getAlbumTitle($siblings[1]).'"><a href="'.$api->getAlbumURL($siblings[1]).'"><div class="galleryNextButton"></div></a></div>';
+	}
+?>
 </div>
 <div class="album-header">
 	<div>
@@ -17,9 +25,9 @@ Debugger::enable(Debugger::DEVELOPMENT);
 	</div>
 </div>
 
-<div id="customMyGallery">
+<div id="customAlbum" class="justified-gallery">
 <?php
-	foreach ($api->getAlbumPhotos($_REQUEST['id']) as $photo) {
+	foreach ($api->getAlbumPhotos($_REQUEST['id'], array_key_exists('page', $_REQUEST) ? $_REQUEST['page'] : null) as $photo) {
 		echo '<a class="img-container" id="'.$api->getPhotoID($photo).'" href="'.$api->getPhotoLargeURL($photo).'">
 				<img src="'.$api->getPhotoThumbnailURL($photo).'">
 			</a>';
@@ -27,3 +35,21 @@ Debugger::enable(Debugger::DEVELOPMENT);
 ?>
 
 </div>
+
+<?php
+
+if ($api->getAlbumPaginationRequired()) {
+	echo '<div id="pagination" class="text-center">';
+	
+	$page = array_key_exists('page', $_REQUEST) ? $_REQUEST['page'] : 1;
+	foreach ($api->getAlubmPagination() as $key=>$item) {
+		$active = ($page == $key) ? ' active' : '';
+		echo '
+		<a href="'.$item['url'].'">
+			<button page="'.$key.'" class="paginationButton'.$active.'">'.$key.'</button>
+		</a>';
+	}
+
+	echo '</div>';
+}
+?>
