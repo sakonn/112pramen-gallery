@@ -5,9 +5,10 @@ include 'config.php';
 include 'helpers.php';
 include 'classes/FlickrAPI.php';
 
-$api = new FlickrAPI($config['flickr']['key'], $config['flickr']['user'], $config['general']['albumsListing']);
+$api = new FlickrAPI($config['flickr']['key'], $config['flickr']['user'], $config['general']['albumsListing'], $config['general']['albumListing']);
 
 use Tracy\Debugger;
+use Tracy\OutputDebugger;
 Debugger::enable(Debugger::DEVELOPMENT);
 Debugger::$maxLength = 250;
 ?>
@@ -24,6 +25,7 @@ Debugger::$maxLength = 250;
 	<link rel="stylesheet" type="text/css" href="assets/albums.css">
 	<link rel="stylesheet" type="text/css" href="assets/album.css">
 	<link type="text/css" rel="stylesheet" href="assets/lightgallery/css/lightgallery.css" /> 
+	<link type="text/css" rel="stylesheet" href="assets/justifiedgallery/css/justifiedGallery.css" /> 
 </head>
 <body>
 
@@ -47,6 +49,7 @@ if (array_key_exists('id', $_REQUEST)) {
 	<script type="text/javascript" src="assets/lightgallery/modules/lg-zoom.js"></script>
 	<script type="text/javascript" src="assets/lightgallery/modules/lg-rotate.js"></script>
 	<script type="text/javascript" src="assets/lightgallery/modules/lg-share.js"></script>
+	<script type="text/javascript" src="assets/justifiedgallery/js/jquery.justifiedGallery.js"></script>
 
 	<!-- A jQuery plugin that adds cross-browser mouse wheel support. (Optional) -->
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>

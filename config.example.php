@@ -3,6 +3,7 @@ $config = [
   'general' => [
     'api' => 'flickr',
     'albumsListing' => 28,
+    'albumListing' => 36,
   ],
   'flickr' => [
     'key' => 'XXXXXXXXXXXX',
