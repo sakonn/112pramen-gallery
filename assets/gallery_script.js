@@ -42,14 +42,13 @@ $(function() {
     cssAnimation: true,
     waitThumbnailsLoad: false,
   }).on('jg.complete', function (e) {
-    $("#customAlbum").lightGallery({
-      getCaptionFromTitleOrAlt: false,
-      autoplay: false,
-      googlePlus: false,
+    lightGallery(document.getElementById('customAlbum'), {
+      plugins: [lgZoom, lgAutoplay, lgFullscreen, lgHash, lgRotate, lgShare],
+      speed: 500,
       pinterest: false,
-      actualSize: false,
       flipHorizontal: false,
       flipVertical: false,
+      customSlideName: true,
     });
   });
 });

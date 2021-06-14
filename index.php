@@ -24,7 +24,7 @@ Debugger::$maxLength = 250;
 	<link rel="stylesheet" type="text/css" href="assets/gallery_style.css">
 	<link rel="stylesheet" type="text/css" href="assets/albums.css">
 	<link rel="stylesheet" type="text/css" href="assets/album.css">
-	<link type="text/css" rel="stylesheet" href="assets/lightgallery/css/lightgallery.css" /> 
+	<link type="text/css" rel="stylesheet" href="assets/lightgallery/css/lightgallery-bundle.css" /> 
 	<link type="text/css" rel="stylesheet" href="assets/justifiedgallery/css/justifiedGallery.css" /> 
 </head>
 <body>
@@ -42,13 +42,13 @@ if (array_key_exists('id', $_REQUEST)) {
 
 	<script type="text/javascript" src="assets/jquery.min.js"></script>
 	<script type="text/javascript" src="assets/jquery-ui.min.js"></script>
-	<script type="text/javascript" src="assets/lightgallery/js/lightgallery.js"></script>
-	<script type="text/javascript" src="assets/lightgallery/modules/lg-autoplay.js"></script>
-	<script type="text/javascript" src="assets/lightgallery/modules/lg-fullscreen.js"></script>
-	<script type="text/javascript" src="assets/lightgallery/modules/lg-hash.js"></script>
-	<script type="text/javascript" src="assets/lightgallery/modules/lg-zoom.js"></script>
-	<script type="text/javascript" src="assets/lightgallery/modules/lg-rotate.js"></script>
-	<script type="text/javascript" src="assets/lightgallery/modules/lg-share.js"></script>
+	<script type="text/javascript" src="assets/lightgallery/lightgallery.umd.js"></script>
+	<script type="text/javascript" src="assets/lightgallery/plugins/autoplay/lg-autoplay.umd.js"></script>
+	<script type="text/javascript" src="assets/lightgallery/plugins/fullscreen/lg-fullscreen.umd.js"></script>
+	<script type="text/javascript" src="assets/lightgallery/plugins/hash/lg-hash.umd.js"></script>
+	<script type="text/javascript" src="assets/lightgallery/plugins/zoom/lg-zoom.umd.js"></script>
+	<script type="text/javascript" src="assets/lightgallery/plugins/rotate/lg-rotate.umd.js"></script>
+	<script type="text/javascript" src="assets/lightgallery/plugins/share/lg-share.umd.js"></script>
 	<script type="text/javascript" src="assets/justifiedgallery/js/jquery.justifiedGallery.js"></script>
 
 	<!-- A jQuery plugin that adds cross-browser mouse wheel support. (Optional) -->
