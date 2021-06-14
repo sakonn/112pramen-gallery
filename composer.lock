@@ -46,6 +46,13 @@
             ],
             "description": "jQuery JavaScript Library",
             "homepage": "http://jquery.com",
+            "support": {
+                "forum": "http://forum.jquery.com",
+                "irc": "irc://irc.freenode.org/jquery",
+                "issues": "https://github.com/jquery/jquery/issues",
+                "source": "https://github.com/jquery/jquery",
+                "wiki": "http://docs.jquery.com/"
+            },
             "time": "2020-05-05T13:21:02+00:00"
         },
         {
@@ -131,22 +138,26 @@
                 }
             ],
             "description": "jQuery UI is a curated set of user interface interactions, effects, widgets, and themes built on top of the jQuery JavaScript Library. Whether you're building highly interactive web applications or you just need to add a date picker to a form control, jQuery UI is the perfect choice.",
+            "support": {
+                "issues": "https://github.com/components/jqueryui/issues",
+                "source": "https://github.com/components/jqueryui/tree/master"
+            },
             "time": "2016-09-16T05:47:55+00:00"
         }
     ],
     "packages-dev": [
         {
             "name": "tracy/tracy",
-            "version": "v2.8.3",
+            "version": "v2.8.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nette/tracy.git",
-                "reference": "342674bbf72365e8456de9855a8cd839ca695933"
+                "reference": "b23da41363546aa750d9f698f21e14815bd78913"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nette/tracy/zipball/342674bbf72365e8456de9855a8cd839ca695933",
-                "reference": "342674bbf72365e8456de9855a8cd839ca695933",
+                "url": "https://api.github.com/repos/nette/tracy/zipball/b23da41363546aa750d9f698f21e14815bd78913",
+                "reference": "b23da41363546aa750d9f698f21e14815bd78913",
                 "shasum": ""
             },
             "require": {
@@ -203,7 +214,11 @@
                 "nette",
                 "profiler"
             ],
-            "time": "2021-01-31T23:07:09+00:00"
+            "support": {
+                "issues": "https://github.com/nette/tracy/issues",
+                "source": "https://github.com/nette/tracy/tree/v2.8.5"
+            },
+            "time": "2021-06-02T15:42:54+00:00"
         }
     ],
     "aliases": [],
@@ -213,5 +228,5 @@
     "prefer-lowest": false,
     "platform": [],
     "platform-dev": [],
-    "plugin-api-version": "1.1.0"
+    "plugin-api-version": "2.1.0"
 }

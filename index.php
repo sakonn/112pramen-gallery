@@ -41,7 +41,6 @@ if (array_key_exists('id', $_REQUEST)) {
 ?>
 
 	<script type="text/javascript" src="assets/jquery.min.js"></script>
-	<script type="text/javascript" src="assets/jquery-ui.min.js"></script>
 	<script type="text/javascript" src="assets/lightgallery/lightgallery.umd.js"></script>
 	<script type="text/javascript" src="assets/lightgallery/plugins/autoplay/lg-autoplay.umd.js"></script>
 	<script type="text/javascript" src="assets/lightgallery/plugins/fullscreen/lg-fullscreen.umd.js"></script>
