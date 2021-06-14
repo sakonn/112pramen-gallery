@@ -139,7 +139,7 @@ class FlickrAPI{
   }
 
   public function getPhotoThumbnailURL($photo) {
-		$size='n';
+		$size='w';
     $img = 'https://farm'.$photo->farm.'.staticflickr.com/'.$photo->server.'/'.$photo->id.'_'.$photo->secret.'_'.$size.'.jpg';
 
 		return $img;

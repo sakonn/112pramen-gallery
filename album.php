@@ -28,7 +28,7 @@ Debugger::enable(Debugger::DEVELOPMENT);
 <div id="customAlbum" class="justified-gallery">
 <?php
 	foreach ($api->getAlbumPhotos($_REQUEST['id'], array_key_exists('page', $_REQUEST) ? $_REQUEST['page'] : null) as $photo) {
-		echo '<a class="img-container" id="'.$api->getPhotoID($photo).'" href="'.$api->getPhotoLargeURL($photo).'">
+		echo '<a class="" id="'.$api->getPhotoID($photo).'" href="'.$api->getPhotoLargeURL($photo).'">
 				<img src="'.$api->getPhotoThumbnailURL($photo).'">
 			</a>';
 	}
